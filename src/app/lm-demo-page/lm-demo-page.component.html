@@ -1,0 +1,14 @@
+<div class="lm-benefit-page">
+    <lib-lm-header  [title]="title"></lib-lm-header>
+        <div class="lm-search-bar-container">
+            <lib-lm-search-bar [placeholder] = "'Search for keywords...'" (searchEvent) = "searchEventHandler($event)"></lib-lm-search-bar> 
+</div>
+<!-- <div style="width:30%">
+    <app-card-component ></app-card-component>
+</div> -->
+    <div class="lm-card-container">
+        <div  class="lm-card" *ngFor="let card of cards">
+            <lib-lm-card [cardTitle]="card.name" [cardContent]="card.description" [imageUrl]="card.imageUrl" (click)="redirectTo(card.link)"></lib-lm-card>
+        </div>
+    </div>
+</div>
